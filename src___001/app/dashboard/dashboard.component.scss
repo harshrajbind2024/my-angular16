@@ -1,0 +1,29 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #007bff;
+    margin-bottom: 16px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  

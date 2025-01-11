@@ -1,0 +1,45 @@
+<p>heetmap2 works!</p>
+
+<div style="margin-top: 20px; width: 300px;">
+    <mat-form-field appearance="fill">
+      <mat-label>Select Container</mat-label>
+      <mat-select [(value)]="visibleContainer">
+        <mat-option value="tableFactors">Table Factors</mat-option>
+        <mat-option value="driverFactors">Driver Factors</mat-option>
+        <mat-option value="driverQuestions">Driver Questions</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <hr>
+  <div style="display: flex; width: calc(300vw - 170px); margin-top: 20px;">
+    <!-- Table Factors Container -->
+    <div 
+      class="tableFactors" 
+      id="tableFactors" 
+      style="width: 33.33% !important; background-color: lightblue; padding: 10px;" 
+      *ngIf="visibleContainer === 'tableFactors' && !insights.loading">
+      <h3>Table Factors</h3>
+      <p>Displaying data for Table Factors...</p>
+    </div>
+  
+    <!-- Driver Factors Container -->
+    <div 
+      class="driverFactors" 
+      id="driverFactors" 
+      style="width: 33.33% !important; background-color: lightgreen; padding: 10px;" 
+      *ngIf="visibleContainer === 'driverFactors' && !insights.loading">
+      <h3>Driver Factors</h3>
+      <p>Displaying data for Driver Factors...</p>
+    </div>
+  
+    <!-- Driver Questions Container -->
+    <div  
+      class="driverQuestions" 
+      id="driverQuestions" 
+      style="width: 33.33% !important; background-color: lightcoral; padding: 10px;" 
+      *ngIf="visibleContainer === 'driverQuestions' && !insights.loading">
+      <h3>Driver Questions</h3>
+      <p>Displaying data for Driver Questions...</p>
+    </div>
+  </div>
+  
